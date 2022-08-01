@@ -1,0 +1,9 @@
+body {
+    font-family: 'Popins' sans-serif;
+    padding: 15px 0 15px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: white;
+    background-color: rgb(141, 141, 141);
+}
