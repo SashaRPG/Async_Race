@@ -32,5 +32,7 @@ export type TWinners = {
       time: number;
       wins: number;
     }>;
-    count: string | null;
+    counter: string | null;
 };
+
+

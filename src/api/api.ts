@@ -4,7 +4,6 @@ const myURL = 'http://localhost: 3000';
 
 export async function getCars(page: number, limit = 8): Promise<TCars> {
     const resp = await fetch(`${myURL}/garage?_page=${page}&_limit=${limit}`);
-
     return {
         items: await resp.json(),
         counter: resp.headers.get('X-Total-Count'),
@@ -83,7 +82,7 @@ export async function getWinners({
                 car: await getOneCar(winner.id.toString()),
               })),
             ),
-            count: response.headers.get('X-Total-Count'),
+            counter: response.headers.get('X-Total-Count'),
         };
 };
 
