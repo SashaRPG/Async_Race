@@ -41,13 +41,24 @@ export type TDrivingStatus = {
     success: boolean;
 };
 
+export type TRacing = {
+    id: number;
+    name: string;
+    color: string;
+    time: number;
+};
+
 export enum Sort {
     Time = 'time',
     Wins = 'wins',
-}
+};
 
 export enum Order {
     Asc = 'asc',
     Desc = 'desc',
-}
+};
 
+export enum Page {
+    Garage = 'garage',
+    Winners = 'winners',
+};
