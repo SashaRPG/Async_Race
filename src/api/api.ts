@@ -2,7 +2,7 @@ import { TCars, TCar, TBasedCar, TEngine, TWinners, TWinner } from "../utils/typ
 
 const myURL = 'http://localhost: 3000';
 
-export async function getCars(page: number, limit = 8): Promise<TCars> {
+export async function getCars(page: number, limit = 7): Promise<TCars> {
     const resp = await fetch(`${myURL}/garage?_page=${page}&_limit=${limit}`);
     return {
         items: await resp.json(),
@@ -116,7 +116,7 @@ export async function updateWinner(id: number, body: TWinner): Promise<void> {
     })).json();
 };
 
-export async function saweWinner({id, time} : {
+export async function saveWinner({id, time} : {
     id: number;
     time: number;
 }): Promise<void> {

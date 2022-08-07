@@ -39,6 +39,9 @@ const baseConfig = {
         }),
         new CleanWebpackPlugin(),
     ],
+    experiments: {
+        topLevelAwait: true
+    },
 };
 
 module.exports = ({ mode }) => {

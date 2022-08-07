@@ -35,4 +35,19 @@ export type TWinners = {
     counter: string | null;
 };
 
+export type TDrivingStatus = {
+    id: number;
+    time: number;
+    success: boolean;
+};
+
+export enum Sort {
+    Time = 'time',
+    Wins = 'wins',
+}
+
+export enum Order {
+    Asc = 'asc',
+    Desc = 'desc',
+}
 

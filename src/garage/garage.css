@@ -1,3 +1,12 @@
+.garage-container .title, .garage-container .text {
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.cars-contaiter {
+    margin-top: 30px;
+}
+
 .car {
     width: 100px;
     transform: translateY(52px);
