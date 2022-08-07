@@ -9,7 +9,6 @@ import { createCar, updateCar, saveWinner, getOneCar, deleteCar, deleteWinner } 
 import { generateCarsArray } from './utils/car_generator';
 import { Sort, Page } from './utils/types';
 import { racing } from './utils/racing';
-import './style.scss';
 
 let choosenCars: {id: number, name: string, color: string};
 
