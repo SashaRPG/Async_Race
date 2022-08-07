@@ -1,6 +1,6 @@
 import { TCars, TCar, TBasedCar, TEngine, TWinners, TWinner } from "../utils/types";
 
-const myURL = 'http://localhost: 3000';
+const myURL = 'http://localhost:3000';
 
 export async function getCars(page: number, limit = 7): Promise<TCars> {
     const resp = await fetch(`${myURL}/garage?_page=${page}&_limit=${limit}`);
