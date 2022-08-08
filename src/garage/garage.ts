@@ -69,11 +69,11 @@ const startRace = async (id: number): Promise<TDrivingStatus> => {
 const stopRace = async (id: number): Promise<void> => {
     const stopBtn = selectStopBtn(id);
     stopBtn.disabled = true;
-    stopBtn.classList.toggle('turnon', true);
+    stopBtn.classList.toggle('enabled', true);
   
     await getEngineStop(id);
   
-    stopBtn.classList.toggle('turnon', false);
+    stopBtn.classList.toggle('enabled', false);
   
     const startBtn = selectStartBtn(id);
     startBtn.disabled = false;

@@ -12,8 +12,8 @@ import { racing } from './utils/racing';
 
 let chosenCar: {id: number, name: string, color: string};
 const body = document.querySelector('#body') as HTMLBodyElement;
-const createForm = document.querySelector('#create-form') as HTMLFormElement;
-const updateForm = document.querySelector('#update-form') as HTMLFormElement;
+const createForm = document.getElementById('create-form') as HTMLFormElement;
+const updateForm = document.getElementById('update-form') as HTMLFormElement;
 
 
 createPage();
