@@ -6,8 +6,8 @@ export const createPage = (): void => {
   const page = `
     <header class="header">
       <h1 class="header__title" >Async Race</h1>
-      <button type="button" class="button header-garage-button">Garage</button>
-      <button type="button" class="button header-winners-button">Winners</button>
+      <button type="button" class="button choose-garage-button">Garage</button>
+      <button type="button" class="button choose-winners-button">Winners</button>
     </header>
     <main id="garage-page">
       <div class="container-for-forms">
@@ -32,7 +32,7 @@ export const createPage = (): void => {
         <p class="winner-message hidden" id="winner-message"></p>
       </div>
     </main>
-    <div id="winners-page" class="winners">${showWinnersPage()}</div>
+    <div id="winners" class="winners">${showWinnersPage()}</div>
     <div class="pagination">
       <button class="button prev-button" disabled id="prev">←</button>
       <button class="button next-button" disabled id="next">→</button>

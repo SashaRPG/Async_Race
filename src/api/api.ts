@@ -102,7 +102,7 @@ export async function getOneWinner(id: number): Promise<TWinner> {
 export async function getOneWinnerStatus(id: number): Promise<number> {
     return (await fetch(`${myURL}/winners/${id}`)).status;
 };
-export async function deleteWinner(id: number, body: TWinner): Promise<void> {
+export async function deleteWinner(id: number): Promise<void> {
     return (await fetch(`${myURL}/winners/${id}`, {method: 'DELETE'})).json();
 };
 

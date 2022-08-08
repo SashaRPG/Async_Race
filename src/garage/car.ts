@@ -54,7 +54,7 @@ export const showCar = ({id, name, color, isEngineStarted,}: {
 }): string => `
   <div class="buttons container">
     <button class="btn select-btn" id="select-${id}">Select</button>
-    <button class="btn remove-btn" id="remove-${id}">Remove</button>
+    <button class="btn delete-btn" id="delete-${id}">Delete</button>
     <span class="model-of-car">${name}</span>
   </div>
   <div class="track">

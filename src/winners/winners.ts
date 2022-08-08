@@ -15,7 +15,7 @@ export const showWinnersPage = (): string => `
         <th class="table-button table-wins ${
     storage.sortBy === Sort.Wins ? storage.sortOrder : ''
     }	id="sort-by-wins">Number of Wins</th>
-        <th class="table-button table-time ${
+        <th class="table-button table-times ${
     storage.sortBy === Sort.Time ? storage.sortOrder : ''
     }	id="sort-by-time">Best time (sec)</th>
     </tr>
@@ -39,7 +39,6 @@ export const showWinnersPage = (): string => `
       `,
     )
     .join('')}
-
     </table>`;
 
 export async function updateWinners(): Promise<void> {
