@@ -11,5 +11,5 @@ export function getCar(id: number) {
 }
 
 export function getFinishLine(id: number) {
-    return document.querySelector(`finish-line-${id}`) as HTMLDivElement;
+    return document.querySelector(`#finish-line-${id}`) as HTMLDivElement;
 }

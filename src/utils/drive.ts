@@ -10,6 +10,8 @@ export async function startTheDrive(id: number): Promise<TDrivingStatus> {
     startButton.classList.toggle('enabled', true);
 
     const {velocity, distance}: TEngine = await getEngineStart(id);
+    // console.log(getEngineStart(id));
+    console.log(distance, velocity);
     const time = Math.round(distance / velocity);
 
     startButton.classList.toggle('enabled', false);

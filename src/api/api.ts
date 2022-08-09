@@ -39,7 +39,7 @@ export async function updateCar(id: number, car: TBasedCar) {
 };
 
 export async function getStatus(id: number): Promise<{success: boolean}> {
-    const response = await fetch(`${myURL}/engine?id=${id}&status=drive`).catch();
+    const response = await fetch(`${myURL}/engine?id=${id}&status=drive`, {method: 'PATCH'});
     if (response.status !== 200) {
         return {
             success: false
@@ -50,10 +50,10 @@ export async function getStatus(id: number): Promise<{success: boolean}> {
 };
 
 export async function getEngineStart(id: number): Promise<TEngine> {
-    return (await fetch(`${myURL}/engine?id=${id}&status=started`)).json();
+    return (await fetch(`${myURL}/engine?id=${id}&status=started`, {method: 'PATCH'})).json();
 };
 export async function getEngineStop(id: number): Promise<TEngine> {
-    return (await fetch(`${myURL}/engine?id=${id}&status=stopped`)).json();
+    return (await fetch(`${myURL}/engine?id=${id}&status=stopped`, {method: 'PATCH'})).json();
 };
 
 function sortOrder(sort?: string | null, order?: string | null) {

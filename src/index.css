@@ -7,3 +7,8 @@ body {
     color: white;
     background-color: rgb(141, 141, 141);
 }
+
+.hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+}

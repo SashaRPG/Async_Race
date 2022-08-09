@@ -67,7 +67,7 @@ export const showCar = ({id, name, color, isEngineStarted,}: {
         ${carPic(color)}
       </div>
     </div>
-    <div class="finish-line" id="finish-${id}">
+    <div class="finish-line" id="finish-line-${id}">
       <img src="./assets/finish.gif" alt="race finish flag">
     </div>
   </div>

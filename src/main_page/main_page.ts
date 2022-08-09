@@ -11,12 +11,12 @@ export const createPage = (): void => {
     </header>
     <main id="garage-page">
       <div class="container-for-forms">
-        <form class="form create-form">
+        <form class="form create-form" id="create-form">
           <input class="input" id="create-name" name="name" type="text" required />
           <input class="color" id="create-color" name="color" type="color" value="#ffffff" />
           <button class="button" id="create-button" type="submit">Create</button>
         </form>
-        <form class="form update-form">
+        <form class="form update-form" id="update-form">
           <input class="input" id="update-name" name="name" type="text" disabled required />
           <input class="color" id="update-color" name="color" type="color" value="#ffffff" disabled />
           <button class="button" id="update-button" type="submit" disabled >Update</button>

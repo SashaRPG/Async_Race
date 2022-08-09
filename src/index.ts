@@ -3,7 +3,6 @@ import { createPage } from './main_page/main_page';
 import { showGarage, updateGarage } from './garage/garage';
 import { showWinnersPage, updateWinners, setOrder } from './winners/winners';
 import { startTheDrive, stopTheDrive } from './utils/drive';
-import { selectStartBtn, selectStopBtn, getCar, getFinishLine } from './utils/select_elements';
 import { storage } from './api/storage';
 import { createCar, updateCar, saveWinner, getOneCar, deleteCar, deleteWinner } from './api/api'
 import { generateCarsArray } from './utils/car_generator';
@@ -12,12 +11,13 @@ import { racing } from './utils/racing';
 
 let chosenCar: {id: number, name: string, color: string};
 const body = document.querySelector('#body') as HTMLBodyElement;
-const createForm = document.getElementById('create-form') as HTMLFormElement;
-const updateForm = document.getElementById('update-form') as HTMLFormElement;
+
 
 
 createPage();
 await updateGarage();
+const createForm = document.getElementById('create-form') as HTMLFormElement;
+const updateForm = document.getElementById('update-form') as HTMLFormElement;
 
 async function generateCarsClick(event: MouseEvent) {
     const generateButton = <HTMLButtonElement>event.target;
@@ -34,10 +34,11 @@ async function raceButtonClick(event: MouseEvent) {
     const raceButton = <HTMLButtonElement>event.target;
     const victoryMessage = document.querySelector('#winner-message') as HTMLElement;
     raceButton.disabled = true;
-    const resetButton = document.querySelector('.reset-button') as HTMLButtonElement;
-    resetButton.disabled = true;
+    const resetButton = document.querySelector('#reset') as HTMLButtonElement;
+    resetButton.disabled = false;
     const winner = await racing(startTheDrive);
     victoryMessage.innerHTML = `${winner.name} has won! The result is ${winner.time} seconds!`;
+    victoryMessage.classList.remove('hidden');
     await saveWinner(winner);
     setTimeout(() => {
        victoryMessage.classList.add('hidden'); 
