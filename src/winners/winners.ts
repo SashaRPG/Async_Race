@@ -59,13 +59,15 @@ export async function updateWinners(): Promise<void> {
 
 export async function setOrder(sortBy: string): Promise<void> {
     if (storage.sortOrder === Order.Asc) {
+      console.log(storage.sortOrder)
         storage.sortOrder = Order.Desc;
     } else {
         storage.sortOrder = Order.Asc;
     }
+    console.log(storage.sortBy);
     storage.sortBy = sortBy;
 
     await updateWinners();
-    const winnersPage = document.querySelector('#winners-page') as HTMLDivElement;
+    const winnersPage = document.querySelector('#winners') as HTMLDivElement;
     winnersPage.innerHTML = showWinnersPage();
 }

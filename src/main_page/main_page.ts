@@ -32,7 +32,7 @@ export const createPage = (): void => {
         <p class="winner-message hidden" id="winner-message"></p>
       </div>
     </main>
-    <div id="winners" class="winners">${showWinnersPage()}</div>
+    <div id="winners" class="winners" style="display: none">${showWinnersPage()}</div>
     <div class="pagination">
       <button class="button prev-button" disabled id="prev">←</button>
       <button class="button next-button" disabled id="next">→</button>
